@@ -12,7 +12,7 @@ with open("settings.yml", "r") as file:
 
 PORT = config.get("PORT", 8000)
 TIME = config.get("TIME", 10)
-DEVICE = config.get("TIME", "PC")
+DEVICE = config.get("DEVICE", "PC")
 
 IGNORE_APPS = config.get("IGNORE_APPS", [])
 CURSOR_APPS = config.get("CURSOR_APPS", [])
