@@ -1,0 +1,10 @@
+PORT: 8000
+TIME: 10
+DEVICE: "PC"
+
+IGNORE_APPS:
+  - "explorer.exe"
+  - "LockApp.exe"
+
+CURSOR_APPS:
+  - "chrome.exe"
