@@ -1,6 +1,5 @@
 PORT: 8000
 TIME: 10
-DEVICE: "PC"
 
 IGNORE_APPS:
   - "explorer.exe"

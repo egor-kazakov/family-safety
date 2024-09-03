@@ -12,13 +12,12 @@ with open("settings.yml", "r") as file:
 
 PORT = config.get("PORT", 8000)
 TIME = config.get("TIME", 10)
-DEVICE = config.get("DEVICE", "PC")
 
 IGNORE_APPS = config.get("IGNORE_APPS", [])
 CURSOR_APPS = config.get("CURSOR_APPS", [])
 
 # Глобалыне переменные (счетчик активного окна, положение курсора)
-active_window_time_counter = Counter('runtime_active_window', 'Time active windows are running', ['device', 'app'])
+active_window_time_counter = Counter('runtime_active_window', 'Time active windows are running', ['app'])
 last_cursor_position = pyautogui.position()
 
 def get_pid_from_hwnd(hwnd):
@@ -51,10 +50,10 @@ def count_active_window():
 
         if process_name in CURSOR_APPS:
             if pyautogui.position() != last_cursor_position:
-                active_window_time_counter.labels(device=DEVICE, app=process_name).inc(TIME)
+                active_window_time_counter.labels(app=process_name).inc(TIME)
             return
 
-        active_window_time_counter.labels(device=DEVICE, app=process_name).inc(TIME)
+        active_window_time_counter.labels(app=process_name).inc(TIME)
 
 if __name__ == '__main__':
     # Запуск HTTP-сервера для Prometheus
