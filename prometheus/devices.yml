@@ -1,0 +1,7 @@
+#- targets: ["192.168.0.11:8000"]
+#  labels:
+#    device: "PC1"
+#
+#- targets: ["192.168.0.12:8000"]
+#  labels:
+#    device: "PC2"
