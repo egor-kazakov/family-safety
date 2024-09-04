@@ -120,9 +120,9 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisLabel": "",
             "axisPlacement": "auto",
             "axisSoftMax": 5.1,
+            "axisSoftMin": 0,
             "fillOpacity": 70,
             "gradientMode": "none",
             "hideFrom": {
@@ -138,6 +138,7 @@
               "mode": "off"
             }
           },
+          "decimals": 1,
           "fieldMinMax": false,
           "mappings": [],
           "min": 0,
@@ -149,7 +150,8 @@
                 "value": null
               }
             ]
-          }
+          },
+          "unit": "m"
         },
         "overrides": []
       },
@@ -193,7 +195,7 @@
           "disableTextWrap": false,
           "editorMode": "builder",
           "exemplar": false,
-          "expr": "increase(runtime_active_window_total[5m])/60",
+          "expr": "increase(runtime_active_window_total[5m]) / 60",
           "format": "time_series",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
