@@ -291,7 +291,7 @@
       "type": "bargauge"
     }
   ],
-  "refresh": "5s",
+  "refresh": "10s",
   "schemaVersion": 39,
   "tags": [],
   "templating": {
@@ -305,6 +305,6 @@
   "timezone": "browser",
   "title": "Family Safety",
   "uid": "adwa02w4tqyv4a",
-  "version": 2,
+  "version": 3,
   "weekStart": ""
 }
