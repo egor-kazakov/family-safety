@@ -253,20 +253,21 @@
       "id": 5,
       "options": {
         "displayMode": "basic",
-        "maxVizHeight": 300,
-        "minVizHeight": 16,
+        "maxVizHeight": 30,
+        "minVizHeight": 15,
         "minVizWidth": 8,
-        "namePlacement": "auto",
+        "namePlacement": "left",
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
           ],
           "fields": "",
-          "values": false
+          "limit": 15,
+          "values": true
         },
         "showUnfilled": true,
-        "sizing": "auto",
+        "sizing": "manual",
         "valueMode": "color"
       },
       "pluginVersion": "11.2.0",
@@ -305,6 +306,10 @@
           "text": "All",
           "value": "$__all"
         },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "P1809F7CD0C75ACF3"
+        },
         "definition": "label_values(device)",
         "hide": 0,
         "includeAll": true,
@@ -325,7 +330,7 @@
       },
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "15m",
           "value": "15m"
         },
@@ -371,6 +376,6 @@
   "timezone": "browser",
   "title": "Family Safety",
   "uid": "adwa02w4tqyv4a",
-  "version": 3,
+  "version": 4,
   "weekStart": ""
 }
