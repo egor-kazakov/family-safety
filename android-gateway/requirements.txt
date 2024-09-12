@@ -1,5 +1,0 @@
-pygetwindow
-psutil
-prometheus-client
-pyyaml
-pyautogui
