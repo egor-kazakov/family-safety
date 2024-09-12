@@ -1,5 +1,5 @@
 FROM python:3.12-alpine
-RUN apk --no-cache add adb
+RUN apk --no-cache add android-tools
 WORKDIR /app
 COPY . .
 RUN pip install -r requirements.txt
