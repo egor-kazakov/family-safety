@@ -1,0 +1,6 @@
+PORT: 8000
+TIME: 10
+
+IGNORE_APPS:
+  - "explorer.exe"
+  - "LockApp.exe"
