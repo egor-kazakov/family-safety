@@ -10,6 +10,7 @@ services:
     volumes:
       - ./prometheus:/etc/prometheus
       - prometheus_data:/prometheus
+
   grafana:
     image: grafana/grafana:11.2.0
     container_name: grafana
@@ -22,6 +23,14 @@ services:
     volumes:
       - ./grafana:/etc/grafana/provisioning
       - grafana_data:/var/lib/grafana
+
+  gateway:
+    build: ./android-gateway
+    container_name: gateway
+    restart: unless-stopped
+    volumes:
+      - ./adb:/root/.android
+
 volumes:
   prometheus_data:
   grafana_data:
